@@ -34,3 +34,23 @@ prev.addEventListener("click",function(){
 setInterval(() => {
     Avtoplay()
 }, 3000);
+
+for(var i=0; i<images.length; i++){
+    var dot=document.createElement('i')
+    dot.setAttribute('class','fa-regular fa-circle')
+    dot.setAttribute('id',`${i}`)
+    document.querySelector('.slider-dots').appendChild(dot)
+}
+
+var dots=document.querySelectorAll('.slider-dots i')
+for(var y=0; y<dots.length; y++){
+dots[y].addEventListener('click',function(){
+    var id=this.id
+    img.src=images[id]
+})
+
+}
+
+
+   
+

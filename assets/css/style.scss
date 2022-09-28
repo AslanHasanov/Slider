@@ -3,22 +3,25 @@
     padding: 0;
     margin: 0;
 }
-.slider img{
-   width: 100%;
-   height: 100%;
-}
+
+
 .slider{
-  background-color: aqua;
-  background-position: center;
-  background-size: contain;
+  
   height: 40rem;
   position: relative;
+  text-align: center;
 }
+
+.slider img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+ }
 .next{
     position: absolute;
     top: 50%;
     right: 10px;
-    transform: translate(-50%);
+    transform: translateY(-50%);
     color: #ffff;
     cursor: pointer;
     background-color: #212529;
@@ -30,8 +33,8 @@
 .prev{
     position: absolute;
     top: 50%;
-    left: 5.5rem;
-    transform: translate(-50%);
+    left:10PX;
+    transform: translateY(-50%);
     color: #ffff;
     cursor: pointer;
     background-color: #212529;
@@ -39,5 +42,12 @@
     border-radius: 10%;
     opacity: .8;
 
+}
+.slider-dots{
+    button{
+        padding: 3px 1rem;
+        background-color: #212529;
+        opacity: .8;
+    }
 }
 
