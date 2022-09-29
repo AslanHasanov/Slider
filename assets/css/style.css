@@ -43,8 +43,11 @@
   opacity: 0.8;
 }
 
-.slider-dots button {
-  padding: 3px 1rem;
-  background-color: #212529;
-  opacity: 0.8;
+.slider-dots i {
+  cursor: pointer;
+  padding: 5px;
+}
+
+.active {
+  color: #5aafff;
 }/*# sourceMappingURL=style.css.map */

@@ -17,6 +17,7 @@ var prev=document.querySelector('.prev')
         index=0
     }
     img.src=images[index]
+   
 }
 
 next.addEventListener("click",function(){
@@ -31,13 +32,13 @@ prev.addEventListener("click",function(){
     img.src=images[index]
 })
 
-setInterval(() => {
-    Avtoplay()
-}, 3000);
+// setInterval(() => {
+//     Avtoplay()
+// }, 3000);
 
 for(var i=0; i<images.length; i++){
     var dot=document.createElement('i')
-    dot.setAttribute('class','fa-regular fa-circle')
+    dot.setAttribute('class',"fa-solid fa-circle-dot")
     dot.setAttribute('id',`${i}`)
     document.querySelector('.slider-dots').appendChild(dot)
 }
@@ -47,6 +48,13 @@ for(var y=0; y<dots.length; y++){
 dots[y].addEventListener('click',function(){
     var id=this.id
     img.src=images[id]
+
+    var active =document.querySelector('.active')
+    
+    this.classList.add('active')
+    active.classList.remove('active')
+  
+    
 })
 
 }
